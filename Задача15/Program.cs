@@ -10,7 +10,7 @@ int a = int.Parse(Console.ReadLine()!);
 
 void Week(int a)
 {
-    if (a <= 7)
+    if (a <= 7 && a >= 1)
     {
         if (a < 6)
         {

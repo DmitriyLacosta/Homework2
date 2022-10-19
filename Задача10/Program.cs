@@ -10,7 +10,7 @@ int a = int.Parse(Console.ReadLine()!);
 
 void deleteSecond(int a)
 {
-    if (a <= 999)
+    if (a > 99 && a < 1000)
     {
         int first = a / 100;
         int three = a % 10;

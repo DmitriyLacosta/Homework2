@@ -26,5 +26,5 @@ if (a > 9)
 
 }
 else
-    Console.WriteLine("второй цифры нет");
+    Console.WriteLine("второй цифры нет, или число не положительное");
 

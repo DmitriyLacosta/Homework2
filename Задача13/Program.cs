@@ -19,6 +19,6 @@ void targetthree(int a)
         Console.WriteLine("третья цифра введенного числа: " + three);
     }
     else
-        Console.WriteLine("третей цифры нет");
+        Console.WriteLine("третьей цифры нет");
 }
 targetthree(a);
