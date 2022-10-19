@@ -4,19 +4,25 @@
 Console.WriteLine("Программа удаляет 2-ю цифру заданного числа");
 Console.WriteLine("введите положительное число: ");
 int a = int.Parse(Console.ReadLine()!);
-//int count = 1;
-//int b = a;
+
 if (a > 9)
 {
-    while (a > 1000)
+   void deleteSecond(int a)
+   {
+    int sum = 0;
+    int numberPos = 1;
+    while (a > 99)
     {
+        int b = a % 10;
+        sum = sum + b * numberPos;
+        numberPos = numberPos * 10;
         a = a / 10;
-        //count = count + 1;
     }
-    int one = a / 100;
-    int two = a % 10;
-    //int result = a - (count * 10);
-    Console.WriteLine("получившееся число: "+ one + two);
+    a = a / 10;
+    int result = a * numberPos + sum;
+    Console.WriteLine("получившееся число: "+ result);
+   }
+   deleteSecond(a);
 
 }
 else
