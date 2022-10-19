@@ -7,22 +7,22 @@ int a = int.Parse(Console.ReadLine()!);
 
 if (a > 9)
 {
-   void deleteSecond(int a)
-   {
-    int sum = 0;
-    int numberPos = 1;
-    while (a > 99)
+    void deleteSecond(int a)
     {
-        int b = a % 10;
-        sum = sum + b * numberPos;
-        numberPos = numberPos * 10;
+        int sum = 0;
+        int numberPos = 1;
+        while (a > 99)
+        {
+            int b = a % 10;
+            sum = sum + b * numberPos;
+            numberPos = numberPos * 10;
+            a = a / 10;
+        }
         a = a / 10;
+        int result = a * numberPos + sum;
+        Console.WriteLine("получившееся число: " + result);
     }
-    a = a / 10;
-    int result = a * numberPos + sum;
-    Console.WriteLine("получившееся число: "+ result);
-   }
-   deleteSecond(a);
+    deleteSecond(a);
 
 }
 else

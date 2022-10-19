@@ -3,19 +3,22 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Программа показывает 3-ю цифру заданного числа или выдет ошибку если 3-й цифры нет");
+Console.WriteLine("Программа показывает 3-ю цифру заданного числа или выдает ошибку если 3-й цифры нет");
 Console.WriteLine("введите положительное число: ");
 int a = int.Parse(Console.ReadLine()!);
 
-if (a > 99)
+void targetthree(int a)
 {
-    while (a > 1000)
+    if (a > 99)
     {
-        a = a / 10;
+        while (a > 1000)
+        {
+            a = a / 10;
+        }
+        int three = a % 10;
+        Console.WriteLine("третья цифра введенного числа: " + three);
     }
-    int three = a % 10;
-    Console.WriteLine("третья цифра введенного числа: " + three);
+    else
+        Console.WriteLine("третей цифры нет");
 }
-else
-    Console.WriteLine("третей цифры нет");
-
+targetthree(a);

@@ -4,13 +4,24 @@
 // 782 -> 8
 // 918 -> 1
 
- Console.WriteLine("Программа показывает 2-ю цифру трехзначного числа");
- Console.WriteLine("введите трехзначное число: ");
- int a = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Программа показывает 2-ю цифру трехзначного числа");
+Console.WriteLine("введите трехзначное число: ");
+int a = int.Parse(Console.ReadLine()!);
 
- int first = a / 100;
- int three = a % 10;
+void deleteSecond(int a)
+{
+    if (a <= 999)
+    {
+        int first = a / 100;
+        int three = a % 10;
 
- int b = ((a - (first*100 + three))/10);
- Console.WriteLine("вторая цифра введенного числа: "+ b);
+        int b = ((a - (first * 100 + three)) / 10);
+        Console.WriteLine("вторая цифра введенного числа: " + b);
 
+    }
+    else
+    {
+        Console.WriteLine("некорректное число. Введите трехзначное число!");
+    }
+}
+deleteSecond(a);

@@ -8,9 +8,18 @@ Console.WriteLine("Программа проверяет, является ли 
 Console.WriteLine("Введите число от 1 до 7 обозначающий день недели, где 1 это понедельник, а 7 это воскресенье: ");
 int a = int.Parse(Console.ReadLine()!);
 
-if (a < 6)
+void Week(int a)
 {
-    Console.WriteLine("Нет, это не выходной");
+    if (a <= 7)
+    {
+        if (a < 6)
+        {
+            Console.WriteLine("Нет, это не выходной");
+        }
+        else
+            Console.WriteLine("Да, это выходной");
+    }
+    else
+        Console.WriteLine("Некорректное число, введите число от 1 до 7");
 }
-else
-    Console.WriteLine("Да, это выходной");
+Week(a);
